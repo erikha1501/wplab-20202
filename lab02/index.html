@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Exercise2</title>
+        <style>
+            th{
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+        <form action="ex2.php" method=POST>
+        Click submit to start our initial PHP program.
+        
+        <tr> <th>Enter your name: </th><th><input type="text" size="20" c maxlength="20" name="name"></th></tr>
+        <tr> <th>Your class name: </th><th><input type="text" size="20" maxlength="20" name="class"></th></tr>
+        <tr><th>Your university: </th><th><input type="text" size="20" maxlength="20" name="school"></th></tr>
+        <tr><th>What's your hobby?</th></tr>
+        <br>
+        <tr><th></th> <th><input type="checkbox" id="hobby1" name="hobby[]" value="Dancing">
+        <label for="hobby1">Dancing </label></th></tr>
+        <tr><th></th><th><input type="checkbox" id="hobby2" name="hobby[]" value="Reading">
+        <label for="hobby2">Reading</label></th></tr>
+        <tr><th></th><th><input type="checkbox" id="hobby3" name="hobby[]" value="Listening to music">
+        <label for="hobby3">Listening to music </label></th></tr>
+        <tr><th></th><th><input type="checkbox" id="hobby4" name="hobby[]" value="Watching movies">
+        <label for="hobby4">Watching movies </label></th></tr>
+        <tr><th><input type="submit" value="Click to submit"></th>
+        <th><input type="reset" value = "Click to reset"></th></tr>
+        </form>
+        </table>
+    </body>
+</html>
