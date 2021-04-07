@@ -1,9 +1,22 @@
 <html>
     <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="./style.css">
+        <div class="row main-title">
         <title>Distance and Time Calculations</title>
+        </div>
+        
     </head>
     <body>
-        <?php
+    <div class="container-fluid mw-40" >
+    <div class="row">
+        <div class="col-12">
+            <div id = "shadow-box" class="jumbotron min-vh-100 text-center m-0 bg-info d-flex flex-column justify-content-center ">
+            <div class="row">
+            <?php
         $cities = array('Dallas' => 803,
             'Toronto' => 435,
             'Boston' => 848,
@@ -15,8 +28,10 @@
             'Pittsburgh' => 409);
         $destination = $_POST["destination"];
         if (count($destination) > 0) {
-            print 'From Chicago to:';
-            print '<table border="1"><tr> <th>No.</th> <th>Destination</th> <th>Distance</th> <th>Driving time</th> <th>Walking time</th> </tr>';
+            print'<div class="row sub-title"> From Chicago to:</div>';
+            // print 'From Chicago to:';
+            print '
+            <table class="table table-striped table-dark" border="1"><thead><tr> <th>No.</th> <th>Destination</th> <th>Distance</th> <th>Driving time</th> <th>Walking time</th> </tr> </thead> <tbody>';
             $i = 0;
             foreach ($destination as $item){
                 $i++;
@@ -30,7 +45,8 @@
                     print "<tr><td>$i</td><td>$item</td><td colspan=\"3\">N/A</td>";
                 }
             }
-            print '</table>';
+
+            print '</tbody></table>';
         } else {
             print "Sorry, there is no destination";
         }
@@ -46,5 +62,11 @@
 //                print "Sorry, do not have destination information for $destination.";
 //            }
         ?>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+       
     </body>
 </html>
